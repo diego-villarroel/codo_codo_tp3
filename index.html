@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <title>Codo a Codo</title>
+</head>
+<style>
+    #firstBlock{
+        background-image: url('ba1.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 78vh;
+    }
+    #textFirstBlock{
+        /* margin-top: auto;
+        margin-bottom: auto; */
+        vertical-align: middle;
+    }
+    .text-footer {
+        margin-top: auto;
+        margin-bottom: auto;
+        /* font-size: 12px; */
+    }
+    .descuentos {
+        cursor: pointer;
+    }
+</style>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" href="#">
+                    <img src="./codo_codo.png" alt="Bootstrap" width="80">
+                    Conf Bs As
+                  </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end pe-5" id="navbarSupportedContent">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" aria-current="page" href="#firstBlock">La conferencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#secondBlock">Los oradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#thirdBlock">El lugar y la fecha</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#fourthBlock">Convierte en orador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-success" href="#">Comprar tickets</a>
+                        </li>
+                    </ul>                
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="container">
+            <div class="row py-3 justify-content-center">
+                <div id="estudiante" class="col col-md-3 border border-primary text-center m-1 py-3 descuentos">
+                    <h5>Estudiante</h5>
+                    <p>Tiene un descuento</p>
+                    <h5>80%</h5>
+                    <small class="text-muted">*presentar documentación</small>
+                </div>
+                <div id="trainee" class="col col-md-3 border border-success text-center m-1 py-3 descuentos">
+                    <h5>Trainee</h5>
+                    <p>Tiene un descuento</p>
+                    <h5>50%</h5>
+                    <small class="text-muted">*presentar documentación</small>
+                </div>
+                <div id="junior" class="col col-md-3 border border-warning text-center m-1 py-3 descuentos">
+                    <h5>Junior</h5>
+                    <p>Tiene un descuento</p>
+                    <h5>15%</h5>
+                    <small class="text-muted">*presentar documentación</small>
+                </div>
+            </div>
+        </div>
+        <form action="" id="formPagar">
+            <div class="text-center">
+                <small class="text-muted">VENTA</small>
+                <h3>VALOR DE TICKET $200</h3>
+            </div>
+            <div class="container">
+                <div class="row justify-content-center m-3">
+                    <div class="col col-md-5">
+                        <input class="form-control" type="text" name="" id="nombre_form" placeholder="Nombre">
+                    </div>
+                    <div class="col col-md-5">
+                        <input class="form-control" type="text" name="" id="apellido_form" placeholder="Apellido">
+                    </div>
+                </div>
+                <div class="row justify-content-center m-3">
+                    <div class="col col-md-10">
+                        <input class="form-control" type="text" name="" id="email_form" placeholder="Email">
+                    </div>
+                </div>
+                <div class="row justify-content-center m-3">
+                    <div class="col col-md-5">
+                        <label for="" class="form-label">Cantindad</label>
+                        <input class="form-control" type="number" min="0" name="" placeholder="cantidad" id="cantidad" value="0">
+                    </div>
+                    <div class="col col-md-5">
+                        <label for="" class="form-label">Categoría</label>
+                        <select name="" id="descuento" class="form-select">
+                            <option value="">Seleccione una opción</option>
+                            <option value="E">Estudiante</option>
+                            <option value="T">Trainee</option>
+                            <option value="J">Junior</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row justify-content-center m-3">
+                    <div class="col col-md-10 py-4">
+                        <input class="form-control" type="text" name="" id="total" placeholder="Total a Pagar: $">
+                    </div>
+                </div>
+                <div class="row justify-content-center m-3">
+                    <div class="col col-md-5 d-grid">
+                        <button id="borrar" class="btn btn-secondary" type="button">Borrar</button>
+                    </div>
+                    <div class="col col-md-5 d-grid">
+                        <button id="pagar" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">Pagar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
+        <footer class="bg-primary bg-gradient py-4 text-light">
+            <div class="row justify-content-center mx-0 text-center" id="footer">
+                <div class="col col-md-1 mx-2 text-footer">
+                    Preguntas <br>
+                    frecuentes
+                </div>
+                <div class="col col-md-1 mx-2 text-footer">
+                    Contáctanos
+                </div>
+                <div class="col col-md-1 mx-2 text-footer">
+                    Prensa
+                </div>
+                <div class="col col-md-1 mx-2 text-footer">
+                    Conferencias
+                </div>
+                <div class="col col-md-1 mx-2 text-footer">
+                    Términos y <br>
+                Condiciones
+                </div>
+                <div class="col col-md-1  mx-2 text-footer">
+                    Privacidad
+                </div>
+                <div class="col col-md-1 mx-2 text-footer">
+                    Estudiantes
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Resumen de Pago</h1>
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
+                    <div class="modal-body">
+                        <div id="resumen" class="d-none">
+                            <div id="nombre_resumen"></div>
+                            <div id="apellido_resumen"></div>
+                            <div id="email_resumen"></div>
+                            <div id="cantidad_resumen"></div>
+                            <br>
+                            <div id="total_resumen"></div>
+                        </div>
+                        <div id="sin_datos">
+                            Hubo un error al crear los datos de su resumen
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const precio = 200;
+        const desc_estudiante = 80;
+        const desc_trainee = 50;
+        const desc_junior = 15;
+
+        let pagar = 0;
+        let descuento = 0;
+        let cantidad = 0;
+
+        document.getElementById('borrar').addEventListener('click',function(){
+            document.getElementById('formPagar').reset();
+        })
+
+        document.getElementById('pagar').addEventListener('click',function(){
+            let nombre = document.getElementById('nombre_form').value;
+            let apellido = document.getElementById('apellido_form').value;
+            let email = document.getElementById('email_form').value;
+            let cantindad = document.getElementById('cantidad').value;
+            let total = document.getElementById('total').value;
+            document.getElementById('nombre_resumen').innerHTML = 'Nombre: '+nombre;
+            document.getElementById('apellido_resumen').innerHTML = 'Apellido: '+apellido;
+            document.getElementById('email_resumen').innerHTML = 'Email: '+email;
+            document.getElementById('cantidad_resumen').innerHTML = 'Cantindad: '+cantidad;
+            document.getElementById('total_resumen').innerHTML = 'Total: '+total;
+
+            if (nombre != '' && apellido != '' && email != '' && cantidad != 0 && total != ''){
+                document.getElementById('sin_datos').classList.add("d-none");
+                document.getElementById('resumen').classList.remove("d-none");
+            } else {
+                document.getElementById('sin_datos').classList.remove("d-none");
+                document.getElementById('resumen').classList.add("d-none");
+            }
+        })
+
+        document.getElementById('estudiante').addEventListener('click',function(){
+            document.getElementById('descuento').value = 'E';
+            descuento = desc_estudiante;
+            calcularDescuento(descuento);
+        });
+
+        document.getElementById('trainee').addEventListener('click',function(){
+            document.getElementById('descuento').value = 'T';
+            descuento = desc_trainee;            
+            calcularDescuento(descuento);
+        });
+
+        document.getElementById('junior').addEventListener('click',function(){
+            document.getElementById('descuento').value = 'J';
+            descuento = desc_junior;
+            calcularDescuento(descuento);
+        });
+
+        document.getElementById('cantidad').addEventListener('change',function(){
+            cantidad = document.getElementById('cantidad').value;
+            pagar = precio*cantidad;
+            if (descuento != 0) {
+                descuento_tot = (descuento*pagar)/100;
+                pagar = pagar-descuento_tot;
+            }
+            document.getElementById('total').value = '$'+pagar;
+        });
+        document.getElementById('descuento').addEventListener('change',function(){
+            if (document.getElementById('descuento').value == 'J') {
+                descuento = desc_junior;
+            } else if (document.getElementById('descuento').value == 'T') {
+                descuento = desc_trainee;
+            } else if (document.getElementById('descuento').value == 'E') {
+                descuento = desc_estudiante;
+            }
+            calcularDescuento(descuento);
+            // if (pagar != 0) {
+            //     descuento = (descuento/pagar)*100;
+            //     pagar = pagar-descuento;
+            //     document.getElementById('total').value = '$'+pagar;
+            // }
+        });
+
+        function calcularDescuento(descuento){
+            cantidad = document.getElementById('cantidad').value;
+            if(cantidad != 0) {
+                pagar = precio*cantidad;
+                descuento_tot = (descuento*pagar)/100;
+                pagar = pagar-descuento_tot;
+                document.getElementById('total').value = '$'+pagar;
+            }
+        }
+
+    }, false);
+
+    
+</script>
+</html>
